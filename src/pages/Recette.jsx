@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CardRecette from '@/components/CardRecette';
+import HowItWorks from '@/components/HowItWorks';
 
 export default function Recette() {
   const [recettes, setRecettes] = useState([]);
@@ -104,7 +105,7 @@ export default function Recette() {
           {areas.map(a => <option key={a} value={a}>{a}</option>)}
         </select>
       </div>
-
+        <HowItWorks />
       {/* Liste des recettes */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {recettes.length === 0 ? (

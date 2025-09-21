@@ -31,6 +31,8 @@ const Home = () => {
         <HeroSection />
         
       </section>
+      
+
 
       {/* Recipe Preview Section */}
       <section id="recette" className="py-20 px-8 bg-[#242424]">

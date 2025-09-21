@@ -34,23 +34,23 @@ const Navbar = () => {
   return (
     <nav className="bg-transparent p-4 flex justify-between items-center fixed top-0 left-0 w-full z-50">
       <div className="flex items-center">
-        <img src="/logo.png" alt="Mon Logo" className="h-12 w-auto" />
+        <img src="/logo.png" alt="My Logo" className="h-12 w-auto" />
       </div>
 
       <ul className="flex space-x-8 text-xl" style={{ fontFamily: 'Playfair Display, serif' }}>
         {/* Scroll links */}
         <li>
           <HashLink smooth to="/#hero" className={linkClass("hero")}>
-            Accueil
+            Home
           </HashLink>
         </li>
         <li>
           <HashLink smooth to="/#about" className={linkClass("about")}>
-            À propos
+            About
           </HashLink>
         </li>
         <li>
-          <HashLink smooth to="/#contact" className={linkClass("contact")}  >
+          <HashLink smooth to="/#contact" className={linkClass("contact")}>
             Contact
           </HashLink>
         </li>
@@ -58,7 +58,7 @@ const Navbar = () => {
         {/* Separate page */}
         <li>
           <Link to="/recette" className="text-yellow-600 hover:text-gray-300 font-bold">
-            Recettes
+            Recipes
           </Link>
         </li>
       </ul>

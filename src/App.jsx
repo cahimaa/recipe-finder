@@ -7,17 +7,18 @@ import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-grow">
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/recette" element={<Recette />} /> {/* <-- AJOUT ICI */}
-          <Route path="/recette/:id" element={<RecetteDetails />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
+    <div className="flex flex-col min-h-screen">
+  <Navbar />
+  <main className="flex-grow">
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/recette" element={<Recette />} />
+      <Route path="/recette/:id" element={<RecetteDetails />} />
+    </Routes>
+  </main>
+  <Footer />
+</div>
+
   );
 }
 

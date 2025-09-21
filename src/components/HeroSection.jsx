@@ -3,48 +3,51 @@ import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <section className="bg-black min-h-[90vh] flex items-center justify-center px-6 py-16">
-      <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-10">
+    <section className="relative min-h-[70vh] flex items-center justify-center px-0">
+      {/* Background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/bg.jpg')" }}
+      ></div>
 
-        {/* Texte à gauche */}
-        <div className="flex-1 text-center md:text-left">
-          <h1 className="text-5xl font-extrabold text-blue-800 mb-6">
-            Bienvenue sur <span className="text-red-500">Recettes Maison</span>
+      {/* Overlay sombre léger */}
+      <div className="absolute inset-0 bg-black/30"></div>
+
+      {/* Bande de texte horizontale */}
+      <div className="relative w-full flex justify-center">
+        <div className="w-full max-w-full bg-black/30 backdrop-blur-md px-8 py-12 md:px-16 md:py-20 text-center">
+          <h1
+            className="text-4xl md:text-5xl font-extrabold mb-4 text-yellow-500"
+            style={{ fontFamily: 'Playfair Display, serif' }}
+          >
+            Enjoy Cooking
           </h1>
-          <p className="text-gray-700 text-lg mb-8">
-            Découvrez des recettes faciles, rapides et savoureuses du monde entier. 🍲
+          <p
+            className="text-md md:text-lg mb-6 text-white leading-relaxed"
+            style={{ fontFamily: 'Roboto, sans-serif' }}
+          >
+            Discover easy, quick, and delicious recipes from around the world. Cook like a pro and enjoy every bite!
           </p>
           <Link
             to="/recette"
-            className="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300"
+            className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-md hover:shadow-lg" style={{ fontFamily: 'Courgette, cursive' }}
           >
-            Voir les Recettes
+            View Recipes
           </Link>
         </div>
-
-        {/* Zone images à droite */}
-        <div className="relative flex-1 h-[500px] ">
-          <img
-  src="/plate1.jpg"
-  alt="Plat 1"
-  className="absolute rounded-lg shadow-lg w-[610px]"
-  style={{ top: '60px', left: '300px' }}
-/>
-
-          <img
-            src="/plate2C.jpg"
-            alt="Plat 2"
-            className="absolute w-50 rounded-lg shadow-lg"
-            style={{ top: '10px', left: '540px' }}
-          />
-          <img
-            src="/plate3C.jpg"
-            alt="Plat 3"
-            className="absolute w-60 rounded-lg shadow-lg"
-            style={{ top: '350px', left: '685px' }}
-          />
-        </div>
       </div>
+
+      {/* Optionnel : vague ou bord arrondi
+      <svg
+        className="absolute bottom-0 left-0 w-full"
+        viewBox="0 0 1440 150"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="#242424"
+          d="M0,64L48,80C96,96,192,128,288,133.3C384,139,480,117,576,96C672,75,768,53,864,69.3C960,85,1056,139,1152,160C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg> */}
     </section>
   );
 };

@@ -4,3 +4,17 @@
 .font-dancing {
   font-family: 'Dancing Script', cursive;
 }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto', sans-serif; /* pour le texte général */
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif; /* pour les titres */
+}
+
+button, .cta {
+  font-family: 'Courgette', cursive; /* pour boutons ou call-to-action */
+}
